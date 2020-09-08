@@ -1,0 +1,31 @@
+.Searchbar {
+  background-color: #4354b0;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+  padding: 8px;
+}
+.SearchForm {
+  padding: 9px 0;
+  border-radius: 3px;
+  background: white;
+  width: 550px;
+  height: 28px;
+  margin: 0 auto;
+}
+.SearchFormButton {
+  height: 30px;
+  width: 40px;
+  margin: 0;
+  background-position: center;
+  padding: 10px;
+  border: none;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-image: url(https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png);
+}
+.SearchFormInput {
+  width: 500px;
+  vertical-align: middle;
+  border: grey;
+  font-size: 17px;
+}
