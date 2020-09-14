@@ -7,9 +7,9 @@ export default class Searchbar extends Component {
     value: '',
   };
 
-  handleChange = e => {
+  handleChange = ({ target }) => {
     this.setState({
-      value: e.target.value,
+      value: target.value,
     });
   };
 

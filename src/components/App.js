@@ -53,7 +53,6 @@ export default class App extends Component {
 
   fetchImages = () => {
     const { searchQuery, page } = this.state;
-
     ImgAPI.ImgAPI(searchQuery, page)
       .then(images => {
         this.setState(prevState => ({
@@ -70,6 +69,7 @@ export default class App extends Component {
 
   render() {
     const { images, loading, error, showModal } = this.state;
+    const chekImages = images.length > 0 && !loading;
     return (
       <>
         <Section>
@@ -79,7 +79,7 @@ export default class App extends Component {
         <Section>
           {error && <p>Whoops, something went wrong: {error.message}</p>}
           {loading && <Spinner />}
-          {images.length > 0 && !loading && (
+          {chekImages && (
             <>
               <ImageGallery
                 images={images}

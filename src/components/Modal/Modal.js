@@ -12,14 +12,14 @@ export default class Modal extends Component {
     window.removeEventListener('click', this.handleClick);
   }
 
-  handleKeyDown = e => {
-    if (e.code === 'Escape') {
+  handleKeyDown = ({ code }) => {
+    if (code === 'Escape') {
       this.props.onClose();
     }
   };
 
-  handleClick = e => {
-    if (e.target.className === 'Backdrop') {
+  handleClick = ({ target }) => {
+    if (target.className === 'Backdrop') {
       this.props.onClose();
     }
   };
