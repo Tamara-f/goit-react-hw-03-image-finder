@@ -6,7 +6,7 @@ import Spinner from './Loader/Loader';
 import ImageGallery from './ImageGallery/ImageGallery';
 import Button from './Button/Button';
 import Modal from './Modal/Modal';
-import ImgAPI from '../services/ImgAPI';
+import imgApi from '../services/imgApi';
 
 export default class App extends Component {
   state = {
@@ -53,7 +53,8 @@ export default class App extends Component {
 
   fetchImages = () => {
     const { searchQuery, page } = this.state;
-    ImgAPI.ImgAPI(searchQuery, page)
+    imgApi
+      .imgApi(searchQuery, page)
       .then(images => {
         this.setState(prevState => ({
           images: [...prevState.images, ...images],
